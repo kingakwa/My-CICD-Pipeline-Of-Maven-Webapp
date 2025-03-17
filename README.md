@@ -73,6 +73,7 @@
     - Name: `Nexus`
     - AMI: `ubuntu`
     - Instance type: `t2.medium`
+    - storage `50gb`
     - Key pair: `Select a keypair`
     - Security Group (Eit/Open): `8081, 80` and `22 to 0.0.0.0/0`
     - User data
