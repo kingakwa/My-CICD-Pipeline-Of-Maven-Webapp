@@ -78,46 +78,8 @@
     - storage `50gb`
     - Key pair: `Select a keypair`
     - Security Group (Eit/Open): `8081, 80` and `22 to 0.0.0.0/0`
-    - User data
-      
-```
-#!/bin/bash
-# Update package list
-sudo apt update -y
-
-# Install Adoptium (Temurin JDK)
-wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo tee /etc/apt/keyrings/adoptium.asc
-echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print $2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
-sudo apt update -y
-sudo apt install temurin-17-jdk -y
-/usr/bin/java --version
-
-# Install Jenkins
-curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
-sudo apt-get update -y
-sudo apt-get install jenkins -y
-sudo systemctl start jenkins
-sudo systemctl status jenkins
-
-# Install Docker
-sudo apt-get update -y
-sudo apt-get install docker.io -y
-sudo usermod -aG docker $USER  # Add the current user to the Docker group
-newgrp docker
-# Set permissions for Docker socket
-sudo systemctl restart jenkins
-
-# Pull the Nexus Docker image
-sudo docker pull sonatype/nexus3
-
-# Run the Nexus container
-sudo docker run -d -p 8081:8081 --name nexus --restart unless-stopped sonatype/nexus3
-
-# Verify the Nexus container is running
-sudo docker ps
-```
-Launch Instance
+    - User data https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/nexus-install.sh
+    - launch instance
 
 6) EC2 (Dev Environment)
     - Create a Development VM instance
