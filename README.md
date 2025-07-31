@@ -36,8 +36,9 @@
 2) Create An IAM Profile/Role For The Ansible Automation Engine (Dynamic Inventory)
 - Create an EC2 Service Role in IAM with AmazonEC2FullAccess Privilege 
 - Navigate to IAM
-![IAM!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/zdocs/images/Screen%20Shot%202023-10-03%20at%206.20.44%20PM.png)
-    - Click on `Roles`
+<img width="913" height="274" alt="Image" src="https://github.com/user-attachments/assets/aa8de938-0131-4ab7-91a8-2f8f6f5ed480" />
+    
+    - Click on  `Roles`
     - Click on `Create Role`
     - Select `Service Role`
     - Use Case: Select `EC2`
