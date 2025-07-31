@@ -37,7 +37,8 @@
 - Create an EC2 Service Role in IAM with AmazonEC2FullAccess Privilege 
 - Navigate to IAM
 <img width="913" height="274" alt="Image" src="https://github.com/user-attachments/assets/aa8de938-0131-4ab7-91a8-2f8f6f5ed480" />
-    
+
+   
     - Click on  `Roles`
     - Click on `Create Role`
     - Select `Service Role`
@@ -47,7 +48,7 @@
     - Click `Next` 
     - Role Name: `AWS-EC2FullAccess-Role`
     - Click `Create`
-
+      
 3) Jenkins/Maven/Ansible
     - Create a Jenkins VM instance 
     - Name: `Jenkins/Maven/Ansible`
