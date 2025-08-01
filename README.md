@@ -1,4 +1,6 @@
-# End-to-End Jenkins CI/CD Pipeline Project (Architecture)
+# End-to-End Jenkins CI/CD Pipeline Project of Maven-webapp
+
+(Architecture)
 ![CompleteCICDProject!](https://lucid.app/publicSegments/view/0c183bd6-73f4-4547-93e1-5246db5e863c/image.png) 
 
 ###### Project ToolBox 🧰
